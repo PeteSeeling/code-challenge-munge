@@ -44,7 +44,10 @@ OUTPUT:
 
 export function getNamesOfDogs(arr) {
     const dogNames = arr.filter(pet => pet.type === 'dog'); 
-    arr.map(dogNames => dogNames.name);
+    console.log(dogNames);
+    if(arr.type === 'dog'){
+        arr.map(pet => pet.name);
+    }
 
     
     return dogNames;
