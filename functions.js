@@ -1,24 +1,26 @@
 // Use the forEach method to solve these problems! If the function returns an array, it should return a NEW array, without mutating the old array.
 
 
-/*
-For this first set of functions, assume the input array looks like this:
 
-const petsArray = [
-    { name: 'spot', type: 'dog' },
-    { name: 'rover', type: 'dog' },
-    { name: 'jumpy', type: 'frog' },
-    { name: 'einstein', type: 'cat' },
-];
+// *For this first set of functions, assume the input array looks like this:
 
-findByName('jumpy', petsArray)
+// // const petsArray = [
+//     { name: 'spot', type: 'dog' },
+//     { name: 'rover', type: 'dog' },
+//     { name: 'jumpy', type: 'frog' },
+//     { name: 'einstein', type: 'cat' },
+// ];
 
-OUTPUT: 
-{ name: 'jumpy', type: 'frog' }
-*/
+// findByName('jumpy', petsArray)
+
+// OUTPUT: 
+// { name: 'jumpy', type: 'frog' }
+// */
 
 export function findByName(name, arr) {
-    return {};
+    const names = arr.filter(pet =>pet.name);
+       
+    return names[1];
 }
 
 /*
@@ -30,7 +32,9 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const type = arr.filter(pet =>pet.type === 'dog');
+
+    return type;
 }
 
 /*
@@ -39,7 +43,11 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const dogNames = arr.filter(pet => pet.type === 'dog'); 
+    arr.map(dogNames => dogNames.name);
+
+    
+    return dogNames;
 }
 
 
